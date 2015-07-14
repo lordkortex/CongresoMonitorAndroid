@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relt">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_gravity="center_vertical"
+    android:gravity="center_vertical|center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <ImageView
+        android:id="@+id/list_image"
+        android:layout_width="100dip"
+        android:layout_height="100dip"
+        android:src="@drawable/ic_main_blue"
+        android:layout_centerHorizontal="true"
+
+        />
+
+
+    <TextView
+        android:id="@+id/tvFidelity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="@string/app_name"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+
+
+
+    <EditText
+        android:id="@+id/tvUsuario"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/tvPassword"
+        android:layout_below="@+id/tvFidelity"
+        android:layout_marginTop="27dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Usuario"
+        android:textSize="14dip"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:imeOptions="actionNext"
+        android:nextFocusDown="@+id/tvPassword"
+        android:inputType="text">
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/tvPassword"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/loginButton"
+        android:layout_below="@+id/tvUsuario"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:gravity="center"
+        android:password="true"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textSize="14dip"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:imeOptions="actionDone"
+        />
+
+
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="72dp"
+        android:gravity="center_vertical|center"
+        android:background="@drawable/custom_button"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+
+</LinearLayout>
+
+    <TextView
+        android:id="@+id/tvCopy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="@string/copy_right"
+        android:textSize="10sp"
+        android:textAlignment="center"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:textStyle="bold" />
+
+</RelativeLayout>

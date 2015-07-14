@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="monitor.congreso.com.hn.congresomonitor">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <permission
+        android:name="com.example.gcm.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <uses-permission android:name="com.example.gcm.permission.C2D_MESSAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_main_blue"
+        android:label="@string/app_name"
+        android:theme="@style/CustomActionBarTheme">
+
+        <receiver android:enabled="true"
+            android:name="monitor.congreso.com.hn.boot.LtRecieverBoot"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+
+        <receiver android:name="monitor.congreso.com.hn.receivers.MyReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED">
+                </action>
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="monitor.congreso.com.hn.activities.MainActivityMonitor"
+            android:label="@string/app_name">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="monitor.congreso.com.hn.activities.ActivityLogin"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name="monitor.congreso.com.hn.activities.ActivitySesiones"
+            android:parentActivityName="monitor.congreso.com.hn.activities.MainActivityMonitor"
+            android:label="@string/app_name">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="monitor.congreso.com.hn.activities.ActivityProyectos"
+            android:label="@string/app_name">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="monitor.congreso.com.hn.activities.ActivityIntervenciones"
+            android:label="@string/app_name">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="monitor.congreso.com.hn.activities.ActivityIntervencionesRefresh"
+            android:parentActivityName="monitor.congreso.com.hn.activities.MainActivityMonitor"
+            android:label="@string/app_name">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="monitor.congreso.com.hn.activities.ActivityIntervencionesPorUsuario"
+            android:label="@string/app_name">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="monitor.congreso.com.hn.activities.ActivityProyectosFiltro"
+            android:parentActivityName="monitor.congreso.com.hn.activities.MainActivityMonitor"
+            android:label="@string/app_name">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="monitor.congreso.com.hn.activities.ActivityComisiones"
+            android:parentActivityName="monitor.congreso.com.hn.activities.MainActivityMonitor"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable">
+            </meta-data>
+        </activity>
+        <activity
+            android:name="monitor.congreso.com.hn.activities.ActivityPartidos"
+            android:parentActivityName="monitor.congreso.com.hn.activities.MainActivityMonitor"
+            android:label="@string/app_name">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="monitor.congreso.com.hn.activities.ActivityDiputados"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable">
+            </meta-data>
+        </activity>
+        <activity
+            android:name="monitor.congreso.com.hn.activities.ActivityProyectosInsercion"
+            android:parentActivityName="monitor.congreso.com.hn.activities.ActivitySesiones"
+            android:label="@string/app_name">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="monitor.congreso.com.hn.activities.ActivityIntervencionesInsercion"
+            android:parentActivityName="monitor.congreso.com.hn.activities.ActivityProyectosInsercion"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"
+            android:label="@string/app_name">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="monitor.congreso.com.hn.activities.ActivityDashBoardDiputados"
+            android:label="@string/app_name">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="monitor.congreso.com.hn.activities.ActivityDashBoardComisiones"
+            android:parentActivityName="monitor.congreso.com.hn.activities.ActivityComisiones"
+            android:label="@string/app_name">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="monitor.congreso.com.hn.activities.ActivityDashBoardPartidos"
+            android:parentActivityName="monitor.congreso.com.hn.activities.ActivityPartidos"
+            android:label="@string/app_name">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+
+        <receiver
+            android:name="monitor.congreso.com.hn.gcm.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="monitor.congreso.com.hn" />
+            </intent-filter>
+        </receiver>
+        <service android:name="monitor.congreso.com.hn.gcm.GcmIntentService" />
+
+        <service
+            android:name="monitor.congreso.com.hn.boot.LtServiceSyncTracking"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name"
+            android:process=":my_process_syncro_itinerario"
+            >
+        </service>
+
+        <provider android:name="monitor.congreso.com.hn.database.LtProviderTracking" android:authorities="monitor.congreso.com.hn"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Mirador Legislativo</string>
+    <string name="action_general_logout">Logout</string>
+    <string name="action_sesiones_crear">Nueva Sesion</string>
+    <string name="action_sesiones_sincronizar">Sincronizar</string>
+    <string name="action_proyecto_crear">Nuevo Acto Legislativo</string>
+    <string name="action_proyecto_reporte">Reporte Acto Legislativo</string>
+    <string name="action_intervencion_crear">Nueva Intervencion</string>
+    <string name="action_intervencion_reporte">Reporte Intervencion</string>
+    <string name="copy_right">©Law &amp; Finances Consulting Group | Honduras. Todos los Derechos Reservados</string>
+
+</resources>

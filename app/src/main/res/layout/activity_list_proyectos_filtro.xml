@@ -1,0 +1,324 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    tools:context=".MainActivity" >
+
+
+    <ScrollView
+        android:id="@+id/MyScroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="15dp"
+        android:fadeScrollbars="true">
+
+        <RelativeLayout
+            android:id="@+id/LinearCasos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="6"
+            android:layout_marginTop="10dp"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:baselineAligned="false"
+            >
+
+            <TextView
+                android:id="@+id/TextUsuarioCRMs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre de Acto Legislativo"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <LinearLayout
+                android:id="@+id/LayoutNombreProyecto"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:background="#fff"
+                android:orientation="horizontal"
+                android:layout_below="@+id/TextUsuarioCRMs"
+                >
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:ems="10">
+                </AutoCompleteTextView>
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/LayoutSesion"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:background="#fff"
+                android:orientation="horizontal"
+                android:layout_below="@+id/LayoutNombreProyecto"
+                android:paddingTop="10dp"
+                android:weightSum="5"
+                >
+
+                <TextView
+                    android:id="@+id/TextSesion"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sesion"
+                    android:layout_weight="3"
+                    android:layout_alignParentLeft="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <Spinner
+                    android:id="@+id/spinnerSesion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:textAlignment="gravity" />
+
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/LayoutTipoActo"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:background="#fff"
+                android:orientation="horizontal"
+                android:layout_below="@+id/LayoutSesion"
+                android:paddingTop="10dp"
+                android:weightSum="5"
+
+                >
+
+                <TextView
+                    android:id="@+id/textTipoActo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tipo de Acto"
+                    android:layout_weight="3"
+                    android:layout_alignParentLeft="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <Spinner
+                    android:id="@+id/spinnerTipoActo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:textAlignment="gravity" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/LayoutDebate"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:background="#fff"
+                android:orientation="horizontal"
+                android:layout_below="@+id/LayoutTipoActo"
+                android:paddingTop="10dp"
+                android:weightSum="5"
+
+                >
+
+                <TextView
+                    android:id="@+id/textDebate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Debate"
+                    android:layout_weight="3"
+                    android:layout_alignParentLeft="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <Spinner
+                    android:id="@+id/spinnerDebate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:textAlignment="gravity" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LayoutStatus"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:background="#fff"
+                android:orientation="horizontal"
+                android:layout_below="@+id/LayoutDebate"
+                android:paddingTop="10dp"
+                android:weightSum="5"
+
+                >
+
+                <TextView
+                    android:id="@+id/txtStatus"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Status"
+                    android:layout_weight="3"
+                    android:layout_alignParentLeft="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+                <Spinner
+                    android:id="@+id/spinnerStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:textAlignment="gravity" />
+
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/LayoutComision"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:background="#fff"
+                android:orientation="horizontal"
+                android:layout_below="@+id/LayoutStatus"
+                android:paddingTop="10dp"
+                android:weightSum="5"
+
+                >
+
+                <TextView
+                    android:id="@+id/txtComision"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Comision"
+                    android:layout_weight="3"
+                    android:layout_alignParentLeft="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <Spinner
+                    android:id="@+id/spinnerComision"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:textAlignment="gravity" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/LayoutPartido"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:background="#fff"
+                android:orientation="horizontal"
+                android:layout_below="@+id/LayoutComision"
+                android:paddingTop="10dp"
+                android:weightSum="5"
+
+                >
+
+                <TextView
+                    android:id="@+id/txtPartido"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Partido"
+                    android:layout_weight="3"
+                    android:layout_alignParentLeft="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <Spinner
+                    android:id="@+id/spinnerPartido"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:textAlignment="gravity" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/LayoutProponente"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:background="#fff"
+                android:orientation="horizontal"
+                android:layout_below="@+id/LayoutPartido"
+                android:paddingTop="10dp"
+                android:weightSum="5"
+
+                >
+
+                <TextView
+                    android:id="@+id/txtProponente"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Proponente"
+                    android:layout_weight="3"
+                    android:layout_alignParentLeft="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <Spinner
+                    android:id="@+id/spinnerProponente"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:textAlignment="gravity" />
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/LayoutBoton"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:background="#fff"
+                android:orientation="horizontal"
+                android:layout_below="@+id/LayoutProponente"
+                android:paddingTop="5dp"
+                android:weightSum="5"
+
+                >
+
+
+                <Button
+                    android:id="@+id/searchButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvPassword"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_vertical|center"
+                    android:background="@drawable/custom_button"
+                    android:text="Buscar Proyectos"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

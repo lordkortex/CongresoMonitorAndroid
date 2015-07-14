@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/action_sesiones_crear" android:title="@string/action_sesiones_crear"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_sesiones_sincronizar"
+        android:icon="@drawable/ic_launcher"
+        android:title="@string/action_sesiones_sincronizar"
+        app:showAsAction="always" />
+    <item android:id="@+id/action_general_logout" android:title="@string/action_general_logout"
+        android:orderInCategory="100" app:showAsAction="never" />
+   <!-- <item
+        android:id="@+id/search"
+        android:title="Search"
+        app:showAsAction="ifRoom|collapseActionView"
+        android:actionLayout="@layout/action_view_sesion"
+        /> -->
+
+</menu> 
+

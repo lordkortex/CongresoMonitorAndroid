@@ -1,0 +1,139 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivityMonitor">
+
+    <!--  ListRow Left sied Thumbnail image -->
+    <LinearLayout android:id="@+id/thumbnailPrinc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+
+        <!--  ListRow Left sied Thumbnail image -->
+        <LinearLayout android:id="@+id/thumbnail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dip"
+            android:textAlignment="center"
+            android:baselineAligned="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="5dip">
+
+            <ImageView
+                android:id="@+id/generic_image"
+                android:layout_width="100dip"
+                android:layout_height="100dip"
+                android:src="@drawable/ic_launcher"
+
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/generic_field_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/thumbnail"
+            android:layout_toRightOf="@+id/thumbnail"
+            android:text=""
+            android:typeface="sans"
+            android:textSize="9dip"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:gravity="center"
+            />
+
+
+
+        <TextView
+            android:id="@+id/generic_field_1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/generic_field_id"
+            android:layout_marginTop="1dip"
+            android:layout_toRightOf="@+id/thumbnail"
+            android:text="Detalle Principal del DashBoard"
+            android:textColor="#343434"
+            android:textSize="14dip"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/generic_field_2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/generic_field_1"
+            android:textColor="#343434"
+            android:textSize="12dip"
+            android:layout_marginTop="1dip"
+            android:layout_toRightOf="@+id/thumbnail"
+            android:text="Detalle Secundario del Dashboard"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:gravity="center"
+            />
+
+
+
+
+
+        <TextView
+            android:id="@+id/generic_field_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/thumbnail"
+            android:layout_below="@id/generic_field_2"
+            android:layout_alignBottom="@+id/thumbnail"
+            android:text=""
+            android:layout_marginRight="5dip"
+            android:textSize="12dip"
+            android:textColor="@color/maroon"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/generic_field_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/thumbnail"
+            android:layout_below="@id/generic_field_3"
+            android:layout_alignBottom="@+id/thumbnail"
+            android:gravity="left"
+            android:text=""
+            android:layout_marginRight="5dip"
+            android:textSize="12dip"
+            />
+
+
+        <GridView
+            android:id="@+id/gridView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"
+            android:columnWidth="100dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:numColumns="2"
+            android:stretchMode="columnWidth" >
+
+        </GridView>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

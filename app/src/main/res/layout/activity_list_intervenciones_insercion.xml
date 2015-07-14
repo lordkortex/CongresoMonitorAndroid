@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    tools:context=".MainActivity" >
+
+
+    <ScrollView
+        android:id="@+id/MyScroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="15dp"
+        android:fadeScrollbars="true">
+
+        <RelativeLayout
+            android:id="@+id/LinearCasos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:baselineAligned="false"
+            >
+
+
+
+
+            <TextView
+                android:id="@+id/txtProponente"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Proponente:"
+                android:layout_gravity="top"
+                android:textColor="@color/maroon"
+                android:layout_alignParentLeft="true"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteProponente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/txtProponente"
+                android:paddingBottom="10dp"
+                android:paddingTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:ems="10"></AutoCompleteTextView>
+
+            <TextView
+                android:id="@+id/txtTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ingrese aqui la intervención:"
+                android:layout_alignParentLeft="true"
+                android:textColor="@color/maroon"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/autoCompleteProponente"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+
+                <EditText
+                    android:id="@+id/EditTextIntervencion"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:gravity="top"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
+                    android:layout_below="@+id/txtTitulo"
+
+                    android:text="" />
+
+
+        <Button
+            android:id="@+id/ButtonCrearIntervencion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/custom_button"
+            android:gravity="center_vertical|center|bottom"
+            android:text="Crear Intervencion"
+            android:layout_below="@+id/EditTextIntervencion"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

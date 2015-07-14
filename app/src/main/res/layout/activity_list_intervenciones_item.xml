@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dip"
+    android:id="@+id/CanchitaItemLaoyout" >
+
+
+    <!--  ListRow Left sied Thumbnail image -->
+    <LinearLayout android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:padding="8dip"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="5dip">
+
+        <ImageView
+            android:id="@+id/list_image"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:src="@drawable/ic_launcher"
+
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/intervencion_diputado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:textColor="@color/black"
+        android:text=""
+        android:typeface="sans"
+        android:textSize="10dip"
+        android:textStyle="bold"/>
+
+
+
+    <TextView
+        android:id="@+id/intervencion_fecha"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/intervencion_diputado"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text=""
+        android:textColor="@color/maroon"
+        android:textSize="10dip"
+        />
+
+    <TextView
+        android:id="@+id/intervencion_sesion_proyecto"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/intervencion_fecha"
+        android:textColor="@color/wallet_dim_foreground_holo_dark"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text=""
+        android:textSize="13dip"
+        android:textStyle="bold"
+        />
+
+
+    <TextView
+        android:id="@+id/intervencion_texto"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/intervencion_sesion_proyecto"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text=""
+        android:textColor="#343434"
+        android:textSize="16dip"
+     />
+
+
+
+
+
+
+    <TextView
+        android:id="@+id/intervencion_diputado_imagen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_below="@id/intervencion_texto"
+        android:layout_alignBottom="@+id/thumbnail"
+        android:gravity="left"
+        android:text=""
+        android:layout_marginRight="5dip"
+        android:textSize="12dip"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        />
+
+
+    <TextView
+        android:id="@+id/intervencion_partido_imagen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_below="@id/intervencion_diputado_imagen"
+        android:layout_alignBottom="@+id/thumbnail"
+        android:gravity="left"
+        android:text=""
+        android:layout_marginRight="5dip"
+        android:textSize="12dip"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        />
+
+
+</RelativeLayout>
