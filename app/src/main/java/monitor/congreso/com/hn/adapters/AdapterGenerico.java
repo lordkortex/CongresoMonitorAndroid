@@ -127,21 +127,24 @@ public class AdapterGenerico extends RecyclerView.Adapter<AdapterGenerico.ViewHo
         holder.generic_field_4.setText(generic_field_4);
         holder.generic_field_5.setText(generic_imagen);
 
-        if(!"".equals(generic_imagen)){
-            Picasso.with(context)
-                    .load(generic_imagen)
-                    .resize(100, 100)
-                    .placeholder(R.drawable.ic_launcher)
-                    .error(R.drawable.ic_launcher)
-                    .into(holder.imageView);
+        if("".equals(generic_imagen) || generic_imagen.isEmpty()){
+                Picasso.with(context)
+                        .load(R.drawable.ic_launcher)
+                        .resize(100, 100)
+                        .placeholder(R.drawable.ic_launcher)
+                        .error(R.drawable.ic_launcher)
+                        .into(holder.imageView);
+       }else{
+            try {
+                Picasso.with(context)
+                        .load(generic_imagen)
+                        .resize(100, 100)
+                        .placeholder(R.drawable.ic_launcher)
+                        .error(R.drawable.ic_launcher)
+                        .into(holder.imageView);
+            }catch (Exception e){
 
-        }else{
-            Picasso.with(context)
-                    .load(R.drawable.ic_launcher)
-                    .resize(100, 100)
-                    .placeholder(R.drawable.ic_launcher)
-                    .error(R.drawable.ic_launcher)
-                    .into(holder.imageView);
+            }
         }
 
     }

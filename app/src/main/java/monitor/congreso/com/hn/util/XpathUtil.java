@@ -107,6 +107,21 @@ public class XpathUtil {
         return Cadena.toString();
     }
 
+    public static String  buildXmlNotificaciones(final String colid,final String colNombre,final String colDebate,final String colDiputado,final String colIntervencion,final String colFecha){
+
+        StringBuilder Cadena = new StringBuilder();
+        Cadena.append("<intervencion>");
+        Cadena.append("<id>" + colid + "</id>");
+        Cadena.append("<nombre>" +colNombre + " </nombre>");
+        Cadena.append("<debate>" +colDebate + " </debate>");
+        Cadena.append("<diputado>" + colDiputado + " </diputado>");
+        Cadena.append("<textointervencion>" + colIntervencion + " </textointervencion>");
+        Cadena.append("<fecha>" + colFecha + " </fecha>");
+        Cadena.append("</intervencion>");
+
+        return Cadena.toString();
+    }
+
     public static String  buildXmlIntervenciones(final String colid,final String colNombre,final String colDebate,final String colDiputado,final String colIntervencion,final String colFecha){
 
         StringBuilder Cadena = new StringBuilder();
