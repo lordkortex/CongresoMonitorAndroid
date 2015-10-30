@@ -67,7 +67,7 @@ public class BackUpAsyncTask extends AsyncTask<String, Void, String> {
             SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(SoapEnvelope.VER12);
             envelope.setOutputSoapObject(request);
             envelope.dotNet = true;
-            HttpTransportSE androidHttpTransport = new HttpTransportSE(URLWS, 70000);
+            HttpTransportSE androidHttpTransport = new HttpTransportSE(URLWS, 20000);
             androidHttpTransport.call(SOAP_ACTION1, envelope);
             SoapObject result = (SoapObject) envelope.bodyIn;
             xmlResult = result.getProperty(0).toString();
